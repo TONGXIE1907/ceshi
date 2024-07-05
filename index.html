@@ -6,61 +6,62 @@
     <title>合格证</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f7f7;
+            font-family: Arial, sans-serif; /* 设置字体 */
+            margin: 0; /* 移除默认外边距 */
+            padding: 0; /* 移除默认内边距 */
+            background-color: #f7f7f7; /* 设置背景颜色 */
             font-size: 80%; /* 缩小文字到80% */
         }
         .header {
-            background-color: #0092db;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            background-color: #0092db; /* 设置背景颜色 */
+            color: #fff; /* 设置字体颜色 */
+            padding: 10px; /* 设置内边距 */
+            text-align: center; /* 设置文本居中 */
+            display: flex; /* 使用Flexbox布局 */
+            align-items: center; /* 垂直居中对齐 */
+            justify-content: space-between; /* 两端对齐 */
         }
         .header h1 {
-            font-size: 20px;
-            margin: 0;
-            flex: 1;
+            font-size: 20px; /* 设置字体大小 */
+            margin: 0; /* 移除默认外边距 */
+            flex: 1; /* 占据剩余空间 */
         }
         .back-icon {
-            cursor: pointer;
-            width: 24px; /* 调整SVG图标的大小 */
-            height: 24px; /* 调整SVG图标的大小 */
-            fill: #fff; /* SVG图标的颜色 */
+            cursor: pointer; /* 设置鼠标样式为指针 */
+            width: 24px; /* 调整SVG图标的宽度 */
+            height: 24px; /* 调整SVG图标的高度 */
+            fill: #fff; /* 设置SVG图标的颜色 */
         }
         .container {
-            display: flex;
-            justify-content: center;
-            padding: 10px;
+            display: flex; /* 使用Flexbox布局 */
+            justify-content: center; /* 居中对齐 */
+            padding: 10px; /* 设置内边距 */
             margin-top: 0px; /* 向上移动content-box */
+            height: 70vh; /* 设置container的高度为视口高度的70% */
+            align-items: center; /* 垂直居中对齐 */
         }
         .content-box {
-            display: flex;
-            width: 50%; /* 设置宽度为50% */
-            max-width: 50%; /* 最大宽度为50% */
-            padding: 8px;
-            background-color: #fff;
-            /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); */
+            display: flex; /* 使用Flexbox布局 */
+            width: 100%; /* 设置宽度为100% */
+            height: 100%; /* 设置高度为100% */
+            padding: 8px; /* 设置内边距 */
+            background-color: #fff; /* 设置背景颜色 */
+            /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* 取消阴影效果 */
         }
         table {
-            width: 100%;
-            border-collapse: collapse;
+            width: 100%; /* 设置表格宽度为100% */
+            border-collapse: collapse; /* 合并边框 */
         }
         th, td {
-            padding: 8px;
+            padding: 8px; /* 设置单元格内边距 */
             font-size: 1rem; /* 确保两边文字大小一致 */
-            white-space: nowrap; /* 防止文字换行 */
         }
         th {
-            text-align: left;
+            text-align: left; /* 左对齐 */
             font-weight: normal; /* 取消加粗 */
         }
         td {
-            text-align: right;
+            text-align: right; /* 右对齐 */
             font-weight: bold; /* 加粗 */
         }
     </style>
@@ -73,7 +74,7 @@
             </svg>
         </a>
         <h1>合格证</h1>
-        <span></span> <!-- This empty span is to balance the flex layout -->
+        <span></span> <!-- 空的span用于平衡flex布局 -->
     </div>
     <div class="container">
         <div class="content-box">
