@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合格证</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            font-size: 80%; /* 缩小文字到80% */
+        }
+        .header {
+            background-color: #0092db;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header h1 {
+            font-size: 20px;
+            margin: 0;
+            flex: 1;
+        }
+        .back-icon {
+            cursor: pointer;
+            width: 24px; /* 调整SVG图标的大小 */
+            height: 24px; /* 调整SVG图标的大小 */
+            fill: #fff; /* SVG图标的颜色 */
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            margin-top: 0px; /* 向上移动content-box */
+        }
+        .content-box {
+            display: flex;
+            flex-wrap: wrap; /* 允许项目换行 */
+            width: 100%;
+            padding: 12px; /* 调整填充以改善间距 */
+            background-color: #fff;
+            /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); */
+        }
+        .labels, .values {
+            flex: 1;
+            padding: 8px;
+            box-sizing: border-box; /* 确保填充和边框大小不会增加元素的宽度 */
+        }
+        .labels p, .values p {
+            margin: 5px 0;
+            white-space: nowrap; /* 避免内容换行 */
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 90%; /* 适应较小屏幕 */
+            }
+            .header h1 {
+                font-size: 18px; /* 调整标题字体大小 */
+            }
+            .back-icon {
+                width: 20px; /* 调整SVG图标大小 */
+                height: 20px; /* 调整SVG图标大小 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="blank.html"> <!-- 添加链接到空白页面 -->
+            <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                <path d="M768 951.4L337.815 530.15c-10.237-10.031-10.237-26.278 0-36.303L768 72.59V0L263.678 493.848c-10.237 10.024-10.237 26.271 0 36.303L768 1024v-72.6z" fill="#ffffff"></path>
+            </svg>
+        </a>
+        <h1>合格证</h1>
+        <span></span> <!-- This empty span is to balance the flex layout -->
+    </div>
+    <div class="container">
+        <div class="content-box">
+            <div class="labels">
+                <div><p>姓名</p></div>
+                <div><p>性别</p></div>
+                <div><p>年龄</p></div>
+                <div><p>身份证号</p></div>
+                <div><p>从业范围</p></div>
+                <div><p>合格证号</p></div>
+                <div><p>有效期</p></div>
+                <div><p>所属区县</p></div>
+            </div>
+            <div class="values">
+                <div><p>辛峻吉</p></div>
+                <div><p>男</p></div>
+                <div><p>21</p></div>
+                <div><p>510703**********33</p></div>
+                <div><p>A食品、乳制品、餐（饮）具集中消毒、药品、公共管理、饮用水</p></div>
+                <div><p>川(2023)51070329-110949</p></div>
+                <div><p>2024-10-04</p></div>
+                <div><p>涪城区</p></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
