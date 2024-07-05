@@ -2,7 +2,6 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>合格证</title>
     <style>
         body {
@@ -39,37 +38,26 @@
             margin-top: 0px; /* 向上移动content-box */
         }
         .content-box {
-            display: grid;
-            grid-template-columns: repeat(2, auto);
-            gap: 10px;
+            display: flex;
             width: 100%;
-            padding: 12px; /* 调整填充以改善间距 */
+            padding: 8px;
             background-color: #fff;
             /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); */
         }
-        .labels, .values {
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
             padding: 8px;
-            box-sizing: border-box; /* 确保填充和边框大小不会增加元素的宽度 */
         }
-        .labels p, .values p {
-            margin: 5px 0;
-            white-space: nowrap; /* 避免内容换行 */
+        th {
+            text-align: left;
+            font-weight: normal; /* 取消加粗 */
         }
-
-        @media (max-width: 768px) {
-            body {
-                font-size: 90%; /* 适应较小屏幕 */
-            }
-            .header h1 {
-                font-size: 18px; /* 调整标题字体大小 */
-            }
-            .back-icon {
-                width: 20px; /* 调整SVG图标大小 */
-                height: 20px; /* 调整SVG图标大小 */
-            }
-            .content-box {
-                grid-template-columns: 1fr; /* 在小屏幕上一列显示 */
-            }
+        td {
+            text-align: right;
+            font-weight: bold; /* 加粗 */
         }
     </style>
 </head>
@@ -85,26 +73,40 @@
     </div>
     <div class="container">
         <div class="content-box">
-            <div class="labels">
-                <div><p>姓名</p></div>
-                <div><p>性别</p></div>
-                <div><p>年龄</p></div>
-                <div><p>身份证号</p></div>
-                <div><p>从业范围</p></div>
-                <div><p>合格证号</p></div>
-                <div><p>有效期</p></div>
-                <div><p>所属区县</p></div>
-            </div>
-            <div class="values">
-                <div><p>辛峻吉</p></div>
-                <div><p>男</p></div>
-                <div><p>21</p></div>
-                <div><p>510703**********33</p></div>
-                <div><p>A食品、乳制品、餐（饮）具集中消毒、药品、公共管理、饮用水</p></div>
-                <div><p>川(2023)51070329-110949</p></div>
-                <div><p>2024-10-04</p></div>
-                <div><p>涪城区</p></div>
-            </div>
+            <table>
+                <tr>
+                    <th>姓名</th>
+                    <td>辛峻吉</td>
+                </tr>
+                <tr>
+                    <th>性别</th>
+                    <td>男</td>
+                </tr>
+                <tr>
+                    <th>年龄</th>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <th>身份证号</th>
+                    <td>510703**********33</td>
+                </tr>
+                <tr>
+                    <th>从业范围</th>
+                    <td>A食品、乳制品、餐（饮）具集中消毒、药品、公共管理、饮用水</td>
+                </tr>
+                <tr>
+                    <th>合格证号</th>
+                    <td>川(2023)51070329-110949</td>
+                </tr>
+                <tr>
+                    <th>有效期</th>
+                    <td>2024-10-04</td>
+                </tr>
+                <tr>
+                    <th>所属区县</th>
+                    <td>涪城区</td>
+                </tr>
+            </table>
         </div>
     </div>
 </body>
