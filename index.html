@@ -40,7 +40,8 @@
         }
         .content-box {
             display: flex;
-            width: 100%;
+            width: 50%; /* 设置宽度为50% */
+            max-width: 50%; /* 最大宽度为50% */
             padding: 8px;
             background-color: #fff;
             /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); */
@@ -51,6 +52,8 @@
         }
         th, td {
             padding: 8px;
+            font-size: 1rem; /* 确保两边文字大小一致 */
+            white-space: nowrap; /* 防止文字换行 */
         }
         th {
             text-align: left;
