@@ -39,15 +39,15 @@
             margin-top: 0px; /* 向上移动content-box */
         }
         .content-box {
-            display: flex;
-            flex-wrap: wrap; /* 允许项目换行 */
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            gap: 10px;
             width: 100%;
             padding: 12px; /* 调整填充以改善间距 */
             background-color: #fff;
             /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); */
         }
         .labels, .values {
-            flex: 1;
             padding: 8px;
             box-sizing: border-box; /* 确保填充和边框大小不会增加元素的宽度 */
         }
@@ -66,6 +66,9 @@
             .back-icon {
                 width: 20px; /* 调整SVG图标大小 */
                 height: 20px; /* 调整SVG图标大小 */
+            }
+            .content-box {
+                grid-template-columns: 1fr; /* 在小屏幕上一列显示 */
             }
         }
     </style>
