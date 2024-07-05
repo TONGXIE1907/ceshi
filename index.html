@@ -1,77 +1,128 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.5"> <!-- 设置缩放为200% -->
     <title>合格证</title>
     <style>
         body {
-            font-family: Arial, sans-serif; /* 设置字体 */
-            margin: 0; /* 移除默认外边距 */
-            padding: 0; /* 移除默认内边距 */
-            background-color: #f7f7f7; /* 设置背景颜色 */
-            font-size: 80%; /* 缩小文字到80% */
+            font-family: Arial, sans-serif;
+            /* 设置字体 */
+            margin: 0;
+            /* 移除默认外边距 */
+            padding: 0;
+            /* 移除默认内边距 */
+            background-color: #f7f7f7;
+            /* 设置背景颜色 */
+            font-size: 80%;
+            /* 缩小文字到80% */
         }
+
         .header {
-            background-color: #0092db; /* 设置背景颜色 */
-            color: #fff; /* 设置字体颜色 */
-            padding: 10px; /* 设置内边距 */
-            text-align: center; /* 设置文本居中 */
-            display: flex; /* 使用Flexbox布局 */
-            align-items: center; /* 垂直居中对齐 */
-            justify-content: space-between; /* 两端对齐 */
+            background-color: #0092db;
+            /* 设置背景颜色 */
+            color: #fff;
+            /* 设置字体颜色 */
+            padding: 10px;
+            /* 设置内边距 */
+            text-align: center;
+            /* 设置文本居中 */
+            display: flex;
+            /* 使用Flexbox布局 */
+            align-items: center;
+            /* 垂直居中对齐 */
+            justify-content: space-between;
+            /* 两端对齐 */
         }
+
         .header h1 {
-            font-size: 20px; /* 设置字体大小 */
-            margin: 0; /* 移除默认外边距 */
-            flex: 1; /* 占据剩余空间 */
+            font-size: 20px;
+            /* 设置字体大小 */
+            margin: 0;
+            /* 移除默认外边距 */
+            flex: 1;
+            /* 占据剩余空间 */
         }
+
         .back-icon {
-            cursor: pointer; /* 设置鼠标样式为指针 */
-            width: 24px; /* 调整SVG图标的宽度 */
-            height: 24px; /* 调整SVG图标的高度 */
-            fill: #fff; /* 设置SVG图标的颜色 */
+            cursor: pointer;
+            /* 设置鼠标样式为指针 */
+            width: 24px;
+            /* 调整SVG图标的宽度 */
+            height: 24px;
+            /* 调整SVG图标的高度 */
+            fill: #fff;
+            /* 设置SVG图标的颜色 */
         }
+
         .container {
-            display: flex; /* 使用Flexbox布局 */
-            justify-content: center; /* 居中对齐 */
-            padding: 10px; /* 设置内边距 */
-            margin-top: 0px; /* 向上移动content-box */
-            height: 55vh; /* 设置container的高度为视口高度的70% */
-            align-items: center; /* 垂直居中对齐 */
+            display: flex;
+            /* 使用Flexbox布局 */
+            justify-content: center;
+            /* 居中对齐 */
+            padding: 10px;
+            /* 设置内边距 */
+            margin-top: 0px;
+            /* 向上移动content-box */
+            height: 50vh;
+            /* 设置container的高度为视口高度的70% */
+            align-items: center;
+            /* 垂直居中对齐 */
         }
+
         .content-box {
-            display: flex; /* 使用Flexbox布局 */
-            width: 96%; /* 设置宽度为50% */
-            height: 100%; /* 设置高度为100% */
-            padding: 8px; /* 设置内边距 */
-            background-color: #fff; /* 设置背景颜色 */
-            /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* 取消阴影效果 */
+            display: flex;
+            width: 96%;
+            height: 96%;
+            padding: 8px;
+            background-color: #fff;
+            overflow-x: auto;
+            /* 水平溢出时显示滚动条 */
+            position: relative;
+            /* 相对定位 */
         }
+
         table {
-            width: 100%; /* 设置表格宽度为100% */
-            border-collapse: collapse; /* 合并边框 */
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            /* 固定表格布局 */
         }
+
         th, td {
-            padding: 8px; /* 设置单元格内边距 */
-            font-size: 1rem; /* 确保两边文字大小一致 */
-            white-space: nowrap; /* 防止文字换行 */
+            padding: 8px;
+            font-size: 1rem;
+            white-space: normal;
+            /* 允许自动换行 */
+            word-wrap: break-word;
+            /* 断行处理 */
         }
+
         th {
-            text-align: left; /* 左对齐 */
-            font-weight: normal; /* 取消加粗 */
+            text-align: left;
+            font-weight: normal;
+            text-overflow: ellipsis;
+            /* 文本溢出时显示省略号 */
+            padding-left: 2px; /* 增加左侧内边距 */
         }
+
         td {
-            text-align: right; /* 右对齐 */
-            font-weight: bold; /* 加粗 */
+            text-align: right;
+            /* 右对齐 */
+            font-weight: bold;
+            /* 加粗 */
         }
     </style>
 </head>
+
 <body>
     <div class="header">
         <a href="blank.html"> <!-- 添加链接到空白页面 -->
             <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
-                <path d="M768 951.4L337.815 530.15c-10.237-10.031-10.237-26.278 0-36.303L768 72.59V0L263.678 493.848c-10.237 10.024-10.237 26.271 0 36.303L768 1024v-72.6z" fill="#ffffff"></path>
+                <path
+                    d="M768 951.4L337.815 530.15c-10.237-10.031-10.237-26.278 0-36.303L768 72.59V0L263.678 493.848c-10.237 10.024-10.237 26.271 0 36.303L768 1024v-72.6z"
+                    fill="#ffffff"></path>
             </svg>
         </a>
         <h1>合格证</h1>
@@ -116,4 +167,5 @@
         </div>
     </div>
 </body>
+
 </html>
